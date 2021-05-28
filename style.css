@@ -1,0 +1,6 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@300;500&display=swap");
+
+body {
+  font-family: "Nanum Gothic", "Noto Sans KR", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
