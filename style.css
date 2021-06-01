@@ -36,9 +36,8 @@ header {
 }
 
 header .container {
-  width: 77%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: var(--font-size-small);
 }
@@ -48,11 +47,11 @@ header .container .logo {
 }
 
 header .container .menu {
-  flex: 0 0 70%;
+  flex: 0 0 80%;
   height: 100%;
   display: flex;
   padding: 0;
-  margin: 0;
+  margin-right: 150px;
 }
 
 header .container .menu .depth1 {
@@ -82,6 +81,7 @@ header .container .menu .dropdown i {
 
 header .container .icons {
   flex: 1 1 10%;
+  min-width: 20%;
   display: flex;
   height: 100%;
   padding: 0;
@@ -105,9 +105,8 @@ main {
 }
 
 .main_container {
-  width: 77%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /*
@@ -152,6 +151,7 @@ main {
 
 #main_content > div {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   margin-bottom: 10px;
 }
@@ -288,7 +288,8 @@ main {
 sidebar */
 
 #sidebar {
-  min-width: 15%;
+  max-width: 14%;
+  min-width: 14%;
 }
 
 #sidebar .new_post {
@@ -348,4 +349,59 @@ footer .container {
   text-align: center;
   font-size: 13px;
   line-height: 1.8;
+}
+
+/* below 1200 */
+
+@media screen and (max-width: 1199px) {
+  header .container .menu {
+    margin-right: 0;
+  }
+
+  #main_content > div {
+    flex-direction: column;
+  }
+  #sidebar {
+    min-width: 23%;
+    max-width: 23%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  header .container .menu {
+    flex: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    display: block;
+  }
+
+  .main_container {
+    display: block;
+    width: 100%;
+  }
+
+  .main_container nav,
+  .main_container #main_content {
+    margin: 0;
+  }
+
+  header .container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header .container .icons {
+    flex: none;
+  }
+
+  header .container .menu {
+    display: none;
+  }
+
+  #sidebar {
+    display: none;
+  }
 }
