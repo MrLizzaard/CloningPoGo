@@ -394,6 +394,7 @@ footer .container {
   }
 
   header .container .icons {
+    width: 150px;
     flex: none;
   }
 
